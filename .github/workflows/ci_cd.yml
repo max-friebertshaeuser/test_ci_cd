@@ -12,28 +12,3 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: mvn clean install
-  Test:
-    runs-on: ubuntu-latest
-    needs: Build
-    steps:
-      - name: Run tests with Maven
-        run: mvn test
-  Deploy:
-    runs-on: ubuntu-latest
-    needs: Test
-    steps:
-      - name: Deploy to staging
-        run: echo "Deploying to staging environment"
-  Release:
-    runs-on: ubuntu-latest
-    needs: Deploy
-    steps:
-      - name: Create release
-        run: echo "Creating release"
-
-  Monitor:
-    runs-on: ubuntu-latest
-    needs: Release
-    steps:
-      - name: Monitor application
-        run: echo "Monitoring application"
