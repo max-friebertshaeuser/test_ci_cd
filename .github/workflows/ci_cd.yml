@@ -20,5 +20,5 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     steps:
-      name: run test
-      run: mvn test
+      - name: run test
+        run: mvn test
