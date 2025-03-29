@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
 import service.CalculationService;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculationServiceTest {
